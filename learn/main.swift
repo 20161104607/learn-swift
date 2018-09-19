@@ -109,21 +109,56 @@ print("my name is lly")
     print("好")
 }
 
+//switch分支
 
+let sex = 1
+switch sex {
+case 0 :
+    print("男")
+case 1 :
+    print("女")
+default :
+    print("其他")
+}
+//使用case
+let sex1 = 0
+switch sex {
+case 0, 1:
+    print("正常人")
+default:
+    print("其他")
+}
+//使用关键字fallthrough
+let sex2 = 0
+switch sex {
+case 0:
+    fallthrough
+case 1:
+    print("正常人")
+default:
+    print("其他")
+}
+//区间判断
+//switch支持区间判断
+//开区间:0..<10 表示:0~9,不包括10
+//闭区间:0...10 表示:0~10
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let Score = 60
+switch score {
+case 0..<60:
+    print("不及格")
+case 60..<80:
+    print("及格")
+case 80..<90:
+    print("良好")
+case 90..<100:
+    print("优秀")
+default:
+    print("满分")
+}
+//排序
+var array: Array<Int> = [3, 6, 1, 7, 2, 4, 9, 5, 8]
+array.sort(by: {(num1, num2) in
+    return num1 > num2
+})
+print(array)
